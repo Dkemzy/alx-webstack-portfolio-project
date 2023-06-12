@@ -4,20 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Homepage</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <div class="container">
-      <img src="logo.png" alt="Logo">
-      <nav>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Register</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">
+        <img src="logo.png" alt="Logo"> Expense Tracker
+      </label>      
+      <ul>
+      <li><a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a></li>
+      <li><a href="#"><i class="fa fa-fw fa-search"></i> Search</a></li>
+      <li><a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+      <li><a href="#"><i class="fa fa-fw fa-user"></i> Login/Register</a></li>
+    </ul>
+    </nav>
   </header>
   <main>
     <div class="container">

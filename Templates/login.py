@@ -34,7 +34,7 @@ def login():
         # If the user exists and the password is correct, log the user in
         if user and user.password == password:
             login_user(user)
-            return redirect('/')
+            return redirect('/profile.html')  # Redirect to profile page
 
         # Otherwise, show an error message
         else:
@@ -51,4 +51,3 @@ def logout():
 # Run the app
 if __name__ == '__main__':
     app.run(debug=True)
-
