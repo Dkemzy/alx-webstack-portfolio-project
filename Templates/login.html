@@ -1,24 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <header>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">
+        <img src="logo.png" alt="Logo"> Expense Tracker
+      </label>      
+      <ul>
+      <li><a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a></li>
+      <li><a href="#"><i class="fa fa-fw fa-search"></i> Search</a></li>
+      <li><a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+      <li><a href="#"><i class="fa fa-fw fa-user"></i> Login/Register</a></li>
+    </ul>
+    </nav>
+  </header>
+  <body>
+  <section class="container">
+      <div class="card">
+        <div class="card-image car-1"></div>
+          <h2>Title</h2>
+          <p>This is a paragraph about the first image.</p>
+          </div>
+        <div class="card">
+          <div class="card-image car-2"></div>
+          <h2>Title</h2>
+          <p>This is a paragraph about the second image.</p>
+        </div>
+        <div class="card">
+        <div class="card-image car-3"></div>
+          <h2>Title</h2>
+          <p>This is a paragraph about the third image.</p>
+        </div>
+  </section>
+  </body>
+  <footer>
     <div class="container">
-        <h1>Login</h1>
-        <form method="POST" action="/login">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" class="form-control" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-        </form>
+      <p>Copyright &copy; 2023</p>
     </div>
+  </footer>
 </body>
 </html>
 
