@@ -113,22 +113,48 @@ a.active,a:hover{
     left: 0;
   }
 }
-.row {
-  margin-bottom: 20px;
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.col-md-4 {
-  width: 33.33%;
-  float: left;
+.card {
+  background: white;
+  width: 270px;
+  margin: 10px;
+  border-radius: 15px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.card-image {
+  height: 170px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
 }
 
-p {
-  margin-bottom: 10px;
+.car-1{
+  background-image: url();
+}
+
+.car-2{
+  background-image: url();
+}
+
+.car-3{
+  background-image: url();
+}
+
+.card p {
+  padding: 10px;
+}
+
+.card:hover{
+  background-color: aqua;
+  color: white;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 1s ease;
 }
 
 footer {
