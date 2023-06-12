@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content%}
+<div class="container d-flex justify-content-center">
+    <div class="row justify-content-center">
+        {% for expense in expenses %}
+            <div class="card border-danger mb-3" style="margin: 1rem; min-width: 18rem;">
+                <div class="card-header">{{ expense.category }}</div>
+                <div class="card-body">
+                    <h5 class="card-title">{{expense.title}}</h5>
+                    <p class="card-text">{{expense.amount}}</p>
+                    <p class="card-text"><small class="text-muted">{{expense.date.strftime('%Y-%m-%d')}}</small>
+                    </p>
+                    <a href='#' class="btn btn-primary">Edit</a>
+                    <a href='#' class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+        {% endfor%}
+    </div>
+</div>
+{% endblock%}
