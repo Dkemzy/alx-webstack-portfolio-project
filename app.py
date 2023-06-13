@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request
 from datetime import datetime
 from forms import ExpenseForm
 from flask_sqlalchemy import SQLAlchemy
@@ -40,6 +40,33 @@ def add():
     form.date.data = datetime.now()
     return render_template('add.html', form=form)
 
+@app.route("/update/<int:expense_id>", methods=['GET', 'POST'])
+def update(expense_id):
+    expense = Expense.query.get_or_404(expense_id)
+    form = ExpenseForm()
+        # if the form is validated and submited, update the data of the item
+        # with the data from the field
+    if form.validate_on_submit():
+        expense.title = form.title.data
+        expense.category = form.category.data
+        expense.amount = form.amount.data
+        expense.date = form.date.data
+        db.session.commit()
+        return redirect(url_for('home'))
+        # populate the field with data of the chosen expense 
+    elif request.method == 'GET':
+        form.title.data = expense.title
+        form.category.data = expense.category
+        form.amount.data = expense.amount
+        form.date.data = expense.date
+    return render_template('add.html', form=form, title='Edit Expense')
+
+@app.route("/delete/<int:expense_id>", methods=['POST'])
+def delete(expense_id):
+    expense = Expense.query.get_or_404(expense_id)
+    db.session.delete(expense)
+    db.session.commit()
+    return redirect(url_for('home'))
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=True)
