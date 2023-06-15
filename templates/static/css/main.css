@@ -10,11 +10,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-}
-
-header {
-  background-color: #fff;
-  padding: 20px;
+  background-image: url("/templates/static/css/images/background.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .container {
