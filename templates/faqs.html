@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Expense Tracker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Login</a>
+                <a class="nav-item nav-link" href="#">Register</a>
+            </div>
+        </ul>
+    </div>
+  </nav>
+
+  <section class="container">
+    <h2>Welcome to Expense Tracker</h2>
+    <p>Track your expenses easily and efficiently with our Expense Tracker app.</p>
+
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq">
+      <button class="faq-question" data-toggle="collapse" data-target="#faq1" aria-expanded="false" aria-controls="faq1">
+        How does the Expense Tracker app work?
+      </button>
+      <div class="collapse" id="faq1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus elit ut felis finibus, et euismod velit vestibulum. Sed tempus, urna ut lobortis luctus, nunc nunc congue sem, et volutpat justo ipsum id elit.</p>
+      </div>
+
+      <button class="faq-question" data-toggle="collapse" data-target="#faq2" aria-expanded="false" aria-controls="faq2">
+        Can I sync the Expense Tracker with my bank accounts?
+      </button>
+      <div class="collapse" id="faq2">
+        <p>Nullam aliquet mi sit amet quam facilisis, nec scelerisque dolor dapibus. Aenean vestibulum neque in eros lobortis, id gravida sem vulputate. Mauris eu mi quis mauris suscipit rutrum in id nunc.</p>
+      </div>
+
+      <button class="faq-question" data-toggle="collapse" data-target="#faq3" aria-expanded="false" aria-controls="faq3">
+        Is the Expense Tracker app available on mobile devices?
+      </button>
+      <div class="collapse" id="faq3">
+        <p>Sed vitae dapibus velit. Suspendisse volutpat, dui at egestas ultrices, nunc tellus fringilla risus, nec rhoncus neque massa ut dui. Vestibulum tincidunt dapibus est, nec fringilla ex semper at.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="block">
+      <div class="row">
+        <div class="footer-col">
+          <h4>
+            <img src="/templates/static/css/images/logo.png" alt="Logo">
+            Expense Tracker
+          </h4>
+        </div>
+
+        <div class="footer-col">
+          <h4>FAQs</h4>
+          <ul>
+            <li><a href="faqs.html">Frequent Asked Question</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Reach us at:</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>  
+        </div>
+
+        <div class="footer-col">
+          <h4>Address</h4>  
+        </div>
+      </div>
+      <p>Copyright &copy; 2023</p>
+    </div>
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvHv0E94S6d6K6zG8s" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CYw5pAFbRTzabglLVjr8NTP8s5Rn5dciE2p5T2lXYB3j2D8e5hJwCfcoR" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -15,6 +15,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Added */
 }
 
 .container {
@@ -37,15 +40,15 @@ body {
   border-radius: 15px 15px 0 0;
 }
 
-.car-1{
+.car-1 {
   background-image: url();
 }
 
-.car-2{
+.car-2 {
   background-image: url();
 }
 
-.car-3{
+.car-3 {
   background-image: url();
 }
 
@@ -53,7 +56,7 @@ body {
   padding: 10px;
 }
 
-.card:hover{
+.card:hover {
   background-color: aqua;
   color: white;
   cursor: pointer;
@@ -65,15 +68,16 @@ body {
   background-color: #24262b;
   padding: 20px;
   text-align: center;
+  margin-top: auto; /* Added */
 }
 
-.block{
+.block {
   max-width: 1170px;
   background-color: blaliceblue;
   margin: auto;
 }
 
-.row{
+.row {
   display: flexbox;
   flex-wrap: wrap;
 }
@@ -97,7 +101,7 @@ body {
 }
 
 .footer-col h4::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -105,6 +109,11 @@ body {
   height: 2px;
   box-sizing: border-box;
   width: 100%;
+}
+
+.footer-col h4 img {
+  max-width: 40px;
+  margin-right: 10px;
 }
 
 .footer-col ul {
@@ -155,17 +164,16 @@ body {
   background-color: #ffffff;
 }
 
-
 /*@media responsiveness*/
-@media (max-width:762px) {
-  .footer-col{
+@media (max-width: 762px) {
+  .footer-col {
     width: 50%;
     margin-bottom: 30px;
   }
 }
 
-@media (max-width:574px) {
-  .footer-col{
+@media (max-width: 574px) {
+  .footer-col {
     width: 100%;
   }
 }
