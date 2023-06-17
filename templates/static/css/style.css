@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -7,159 +7,211 @@
 }
 
 body {
-  margin: 0;
+  margin: 20px 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url("/Users/4G COMMUNICATIONS/Downloads/background.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-header {
-  background-color: #fff;
-  padding: 20px;
-}
-
-nav{
-  background: #0082e6;
-  height: 80px;
-  width: 100%;
-}
-
-label.logo{
-  color:white;
-  font-size:35px;
-  line-height: 80px;
-  padding: 0 100p;
-  font-weight: bold;
-}
-
-nav ul{
-  float: right;
-  margin-right: 20px;
-}
-nav ul li{
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-}
-
-nav ul li a{
-  color: white;
-  font-size: 17px;
-  padding: 7px 13px;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-
-a.active,a:hover{
-  background:#1b9bff;
-  transition: .5s;
-}
-
-.checkbtn{
-  font-size: 30px;
-  color:white;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
-
-#check{
-  display: none;
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-@media (max-width: 952px) {
-  label.logo{
-    font-size: 30px;
-    padding-left: 50px;
-  }
-  nav ul li a{
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 858px) {
-  .checkbtn{
-    display: block;
-  }
-  ul{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #2c3e50;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-  }
-  nav ul li{
-    display: block;
-  }
-  nav ul li a{
-    font-size: 20px;
-    margin:50px 0 ;
-    line-height: 30px;
-  }
-  a:hover,a.active{
-    background: none;
-    color: #0082e6;
-  }
-  #check:checked ~ ul{
-    left: 0;
-  }
-}
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 80%; /* Added width */
+  margin: 0 auto; /* Center the container */
+  border-radius: 10px; /* Added border-radius */
+  background-color: #fff; /* Added background-color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.login-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-image {
+  margin-bottom: 10px;
+}
+
+.profile-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.block {
+  max-width: 1170px;
+  background-color: #f2f2f2; /* Updated background-color */
+  margin: auto;
+}
+
+.row {
+  display: flex;
   flex-wrap: wrap;
 }
 
-.card {
-  background: white;
-  width: 270px;
-  margin: 10px;
-  border-radius: 15px;
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card-image {
-  height: 170px;
-  margin-bottom: 15px;
-  background-size: cover;
-  border-radius: 15px 15px 0 0;
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
 }
 
-.car-1{
-  background-image: url();
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-.car-2{
-  background-image: url();
+.footer-col h4 img {
+  max-width: 40px;
+  margin-right: 10px;
 }
 
-.car-3{
-  background-image: url();
+.footer-col ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.card p {
-  padding: 10px;
+.footer-col ul li {
+  margin-bottom: 10px;
 }
 
-.card:hover{
-  background-color: aqua;
-  color: white;
-  cursor: pointer;
-  transform: scale(1.03);
-  transition: all 1s ease;
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
 }
 
-footer {
-  background-color: #ccc;
-  padding: 20px;
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 10px;
   text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.3s ease;
 }
 
+.social-links a:hover {
+  color: #e91e63;
+  background-color: #ffffff;
+}
+
+.footer p {
+  color: white;
+}
+
+/*@media responsiveness*/
+@media (max-width: 762px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}

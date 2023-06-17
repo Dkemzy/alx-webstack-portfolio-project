@@ -1,14 +1,14 @@
 # Import the necessary modules
 from flask import Flask, render_template, request, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager, UserMixin, login_user, logout_user
+from flask_login import LoginManager, UserMixin, login_user, logout_user, current_user
 
 # Create the Flask app
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Add a secret key for flash messages
 
 # Create the database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/mydatabase.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.sqlite3'
 db = SQLAlchemy(app)
 
 # Create the user model
@@ -34,7 +34,7 @@ def login():
         # If the user exists and the password is correct, log the user in
         if user and user.password == password:
             login_user(user)
-            return redirect('/profile.html')  # Redirect to profile page
+            return redirect('/profile')  # Redirect to profile page
 
         # Otherwise, show an error message
         else:
@@ -47,6 +47,14 @@ def login():
 def logout():
     logout_user()
     return redirect('/')
+
+# Define the profile route
+@app.route('/profile')
+def profile():
+    if current_user.is_authenticated:
+        return render_template('profile.html')
+    else:
+        return redirect('/login')
 
 # Run the app
 if __name__ == '__main__':
