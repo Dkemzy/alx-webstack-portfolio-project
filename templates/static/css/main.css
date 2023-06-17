@@ -41,15 +41,15 @@ body {
 }
 
 .car-1 {
-  background-image: url("/templates/static/css/images");
+  background-image: url("/templates/static/css/images/business.jpg");
 }
 
 .car-2 {
-  background-image: url();
+  background-image: url("/templates/static/css/images/family.jpg");
 }
 
 .car-3 {
-  background-image: url();
+  background-image: url("/templates/static/css/images/istockphoto-138017387-612x612.jpg");
 }
 
 .card p {
