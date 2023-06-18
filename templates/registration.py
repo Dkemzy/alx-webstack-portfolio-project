@@ -1,14 +1,26 @@
 import cgi
-from sqlalchemy import create_engine, Column, Integer, String
-angese
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+
+# Create the SQLAlchemy instance
+db = SQLAlchemy()
+
+# Create declarative base
 Base = declarative_base()
 
 # Define User model
 class User(Base):
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True)
-    username = Column(String)
-    password = Column(String)
+    username = Column(String(20), unique=True)
+    password = Column(String(20))
+
+# Create database engine and session
+engine = db.create_engine('sqlite:///mydatabase.sqlite3', echo=True)
+Session = sessionmaker(bind=engine)
+session = Session()
 
 # Create tables
 Base.metadata.create_all(engine)
