@@ -7,11 +7,14 @@
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Add your custom styles here */
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">
-      <img src="/templates/static/css/images/logo.png" alt="Logo" width="50" height="40" class="d-inline-block align-text-top">
+      <img src="/Users/4G COMMUNICATIONS/Downloads/logo.png" alt="Logo" width="50" height="40" class="d-inline-block align-text-top">
       Expense Tracker
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -34,104 +37,100 @@
     </div>
   </nav>
 
- <!-- ... -->
-<section class="jumbotron text-center">
-  <div class="container">
-    <h1 class="jumbotron-heading">Expense Tracking app</h1>
-    <p class="lead text-muted">A cool Expense Tracking app. Manage your cash flow for a better tomorrow!</p>
-    <p>
-      text
-    </p>
+  <section class="jumbotron text-center">
     <div class="container">
-      <div class="lregister-container collapse" id="registrationForm">
-        <div class="profile-icon">
-          <i class="fas fa-user-circle fa-5x"></i>
-        </div>
-        <h2>Register</h2>
-        <form method="POST" action="login.py">
-          <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" class="form-control" id="username" name="username" required>
-          </div>
-          <div class="form-group">
-            <label for="password">Password:</label>
-            <div class="password-input">
-              <input type="password" class="form-control" id="password" name="password" required>
-              <span class="password-toggle" onclick="togglePasswordVisibility()"><i class="fas fa-eye"></i></span>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary">Login</button>
-        </form>
-        <div class="social-login">
-          <p>Or sign up with:</p>
-          <a href="#" class="btn btn-social btn-facebook" onclick="checkAccountLink('facebook')"><i class="fab fa-facebook-f"></i> Facebook</a>
-          <a href="#" class="btn btn-social btn-google" onclick="checkAccountLink('google')"><i class="fab fa-google"></i> Google</a>
+      <h1 class="jumbotron-heading">Expense Tracking app</h1>
+      <p class="lead text-muted">A cool Expense Tracking app. Manage your cash flow for a better tomorrow!</p>
+      <p>
+        text
+      </p>
+      <div class="row">
+        <div class="col-md-6 offset-md-6">
+          <button type="button" class="btn btn-primary" onclick="openRegistrationForm()">Sign Up</button>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="container">
-  <h2 class="text-center">Our Products</h2>
-    <div class="card">
-      <div class="card-image car-1"></div>
-      <h2>Title</h2>
-      <p>This is a paragraph about the first image.</p>
-    </div>
-    <div class="card">
-      <div class="card-image car-2"></div>
-      <h2>Title</h2>
-      <p>This is a paragraph about the second image.</p>
-    </div>
-    <div class="card">
-      <div class="card-image car-3"></div>
-      <h2>Title</h2>
-      <p>This is a paragraph about the third image.</p>
     </div>
   </section>
 
-  <main>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </main>
+  <section class="container">
+    <div class="card">
+      <div class="card-image car-1"></div>
+      <h2>Business</h2>
+      <p>For business people, maintaining an accurate expense tracker is vital for financial control and decision-making. By recording and categorizing expenses, they gain insights into spending patterns, identify areas of overspending or cost-saving opportunities, and track the profitability of their ventures. Expense tracking enables budgeting, tax preparation, and financial reporting, aiding in maintaining a healthy bottom line and optimizing business operations.</p>
+    </div>
+    <div class="card">
+      <div class="card-image car-2"></div>
+      <h2>Family</h2>
+      <p>TFamilies also benefit greatly from expense tracking. By keeping track of expenses, families can create and stick to budgets, manage bills and recurring payments, set savings goals, and track their progress. It allows them to identify areas where they can cut costs, reduce unnecessary spending, and allocate funds for important family priorities such as education, vacations, or emergencies.</p>
+    </div>
+    <div class="card">
+      <div class="card-image car-3"></div>
+      <h2>Personal</h2>
+      <p>Expense tracking is valuable for individuals who want to gain control over their personal finances. By tracking expenses, individuals can develop a clear understanding of their spending habits, identify areas where they can save money, and work towards their financial goals. It enables them to make informed decisions about their spending, reduce debt, save for retirement, and achieve overall financial well-being.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="lregister-container" id="registrationForm">
+      <form>
+        <h2>Registration Form</h2>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" class="form-control" id="username" placeholder="Enter username">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
 
   <footer class="footer">
-    <div class="block">
-      <div class="row">
-        <div class="footer-col">
-          <h4>
-            <img src="/templates/static/css/images/logo.png" alt="Logo">
-            Expense Tracker
-          </h4>
-        </div>
-
-        <div class="footer-col">
-          <h4>FAQs</h4>
-          <ul>
-            <li><a href="faqs.html">Frequently Asked Questions</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Reach us at:</h4>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>  
-        </div>
-
-        <div class="footer-col">
-          <h4>Address</h4>  
-        </div>
-      </div>
-      <p>&copy; 2023 Expense Tracker</p>
+      <div class="block">
+        <div class="row">
+          <div class="footer-col">
+            <h4>
+              <img src="/templates/static/css/images/logo.png" alt="Logo">
+              Expense Tracker
+            </h4>
+          </div>
+  
+          <div class="footer-col">
+            <h4>FAQs</h4>
+            <ul>
+              <li><a href="faqs.html">Frequently Asked Questions</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-col">
+            <h4>Reach us at:</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>  
+          </div>
+  
+          <div class="footer-col">
+            <h4>Address</h4>  
+          </div>
+    <div class="container text-center">
+      <span class="text-muted">© 2023 Expense Tracker. All rights reserved.</span>
     </div>
   </footer>
+
+  <script>
+    function openRegistrationForm() {
+      var registrationForm = document.getElementById("registrationForm");
+      registrationForm.classList.add("registration-form-visible");
+    }
+  </script>
 </body>
 </html>
