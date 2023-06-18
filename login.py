@@ -2,10 +2,11 @@
 from flask import Flask, render_template, request, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, logout_user, current_user
+import secrets
 
 # Create the Flask app
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Add a secret key for flash messages
+app.secret_key = secrets.token_hex(16)  # Add a secret key for flash messages
 
 # Create the database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.sqlite3'
@@ -20,6 +21,10 @@ class User(db.Model, UserMixin):
 # Create the login manager
 login_manager = LoginManager()
 login_manager.init_app(app)
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
 
 # Define the login route
 @app.route('/login', methods=['GET', 'POST'])

@@ -34,17 +34,46 @@
     </div>
   </nav>
 
-  <section class="jumbotron text-center">
+ <!-- ... -->
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Expense Tracking app</h1>
+    <p class="lead text-muted">A cool Expense Tracking app. Manage your cash flow for a better tomorrow!</p>
+    <p>
+      text
+    </p>
     <div class="container">
-        <h1 class="jumbotron-heading">Expense Tracking app</h1>
-        <p class="lead text-muted">A cool Expense Tracking app. Manage your cash flow for a better tomorrow!</p>
-        <p>
-          text
-        </p>
+      <div class="lregister-container collapse" id="registrationForm">
+        <div class="profile-icon">
+          <i class="fas fa-user-circle fa-5x"></i>
+        </div>
+        <h2>Register</h2>
+        <form method="POST" action="login.py">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <div class="password-input">
+              <input type="password" class="form-control" id="password" name="password" required>
+              <span class="password-toggle" onclick="togglePasswordVisibility()"><i class="fas fa-eye"></i></span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <div class="social-login">
+          <p>Or sign up with:</p>
+          <a href="#" class="btn btn-social btn-facebook" onclick="checkAccountLink('facebook')"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="#" class="btn btn-social btn-google" onclick="checkAccountLink('google')"><i class="fab fa-google"></i> Google</a>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-  <section class="container">
+<section class="container">
+  <h2 class="text-center">Our Products</h2>
     <div class="card">
       <div class="card-image car-1"></div>
       <h2>Title</h2>
