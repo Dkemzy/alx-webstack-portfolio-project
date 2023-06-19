@@ -1,54 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Homepage</title>
-  <link rel="stylesheet" href="main.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> About Us </title>
+    <link rel="stylesheet" href="static/css/aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-  <header>
-    <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <label class="logo">
-        <img src="logo.png" alt="Logo"> Expense Tracker
-      </label>      
-      <ul>
-      <li><a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a></li>
-      <li><a href="#"><i class="fa fa-fw fa-search"></i> Search</a></li>
-      <li><a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
-      <li><a href="#"><i class="fa fa-fw fa-user"></i> Login/Register</a></li>
-    </ul>
-    </nav>
-  </header>
-  <body>
-  <section class="container">
-      <div class="card">
-        <div class="card-image car-1"></div>
-          <h2>Business</h2>
-          <p>For business people, maintaining an accurate expense tracker is vital for financial control and decision-making. By recording and categorizing expenses, they gain insights into spending patterns, identify areas of overspending or cost-saving opportunities, and track the profitability of their ventures. Expense tracking enables budgeting, tax preparation, and financial reporting, aiding in maintaining a healthy bottom line and optimizing business operations.</p>
-          </div>
-        <div class="card">
-          <div class="card-image car-2"></div>
-          <h2>Family</h2>
-          <p>This is a paragraph about the second image.</p>
+    <header>
+        <nav class="navbar">
+            <h2> Expense Tracker </h2>
+            <ul id="list">
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="login.html"> Login </a></li>
+                <li><a href="aboutus.html"> About Us </a></li>
+            </ul>
+            <ul id="res">
+                <li><i class="fa-solid fa-bars"></i></li>
+            </ul>
+            <ul class="responsive">
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="login.html"> Login </a></li>
+                <li><a href="aboutus.html"> About Us </a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="home-left">
+            <img src="" alt="">
         </div>
-        <div class="card">
-        <div class="card-image car-3"></div>
-          <h2>Students</h2>
-          <p>This is a paragraph about the third image.</p>
+        <div class="home-right">
+            <h2 class="home-heading"> Expense Tracker </h2>
+            <p class="home-para">Expense tracker allows you to easily add and categorize 
+              your expenses, set budgets, and view detailed reports.</p>
         </div>
-  </section>
-  </body>
-  <footer>
-    <div class="container">
-      <p>Copyright &copy; 2023</p>
-    </div>
-  </footer>
-</body>
-</html>
+    </section>
 
+    <section id="goal">
+        <div class="goal-left">
+            <h2>Our Mission</h2>
+            <p>Our mission is to help people take control of 
+              their finances by providing a simple and intuitive 
+              expense tracking tool. We believe that everyone 
+              should have access to the tools and resources they 
+              need to make informed decisions about their money
+            </p>
+        </div>
+        <div class="goal-right">
+            <img src="" alt="">
+        </div>
+    </section>
+    <section id="our-Team">
+        <h2>Our Team Members</h2>
+        <div class="teamContainer">
+            <div class="team-item">
+                <img src="" alt="">
+                <h5 class="member-name">Robert Njonjo</h5>
+                <span class="role">Software Engineer</span>
+                <div class>
+                <a href="https://github.com/"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+            <div class="team-item">
+                <img src="" alt="">
+                <h5 class="member-name">Dennis Kamau</h5>
+                <span class="role">Software Engineer</span>
+                <div class>
+                <a href="https://github.com/"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+            <div class="team-item">
+                <img src="" alt="">
+                <h5 class="member-name">Rim El Filali</h5>
+                <span class="role">Software Engineer</span>
+                <div class>
+                <a href="https://github.com/Rima119"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/RimFilali"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p> &copy; 2023 - All rights reserved - Expense Tracker</p>
+    </footer>
+</body>
+<script>
+  const resBtn = document.getElementById('res');
+  resBtn.addEventListener('click', function () {
+      const responsiveRight = document.querySelector('.responsive')
+      resBtn.classList.toggle('active')
+      if (resBtn.classList.contains('active')) {
+          responsiveRight.classList.add('active')
+      }
+      else {
+          responsiveRight.classList.remove('active')
+      }
+  })
+</script>
+</html>
