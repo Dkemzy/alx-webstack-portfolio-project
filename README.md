@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Dkemzy/alx-webstack-portfolio-project/">
-    <img src="https://github.com/Dkemzy/alx-webstack-portfolio-project/blob/main/templates/static/css/images/logo.png" alt="Logo" width="600" height="250">
+    <img src="https://github.com/Dkemzy/alx-webstack-portfolio-project/blob/main/static/css/images/logo.png" alt="Logo" width="600" height="250">
   </a>
 
   <h3 align="center">Expense Tracking</h3></h3>

@@ -45,6 +45,26 @@ def signup(): # define the sign up function
         db.session.commit()
         return redirect(url_for('auth.login'))
 
+#logic for forgot password, kindly test it first
+@auth.route('/forgot-password', methods=['GET', 'POST'])
+def forgot_password():
+    if request.method == 'GET':
+        return render_template('put the right template')
+    else:
+        email = request.form.get('email')
+        # Check if the user exists in the database
+        user = User.query.filter_by(email=email).first()
+        if not user:
+            flash('Email address not found')
+            return redirect(url_for('auth.forgot_password'))
+
+        # Logic for resetting the password (send an email with reset instructions, generate a unique token, etc.)
+        # an addition if necessary.
+        
+        flash('Password reset instructions sent to your email')
+        return redirect(url_for('auth.login'))
+
+
 @auth.route('/logout') # define logout path
 @login_required
 def logout(): #define the logout function
