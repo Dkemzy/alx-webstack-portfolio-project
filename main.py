@@ -89,6 +89,10 @@ def delete(expense_id):
 def aboutus():
     return render_template('aboutus.html')
 
+@main.route("/contactus",methods=['GET','POST'])
+@login_required
+def contactus():
+    return render_template('contactus.html')
 
 app = create_app()  # we initialize our flask app using the __init__.py function
 if __name__ == '__main__':

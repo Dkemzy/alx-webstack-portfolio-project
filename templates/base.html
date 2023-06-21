@@ -1,76 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Expense Tracker</title>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add Expense</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{{ url_for('main.index') }}">
-      <img src="{{ url_for('static',filename='css/images/logo.png') }}" alt="Logo" width="50" height="40" class="d-inline-block align-text-top">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{{ url_for('main.index') }}" >
-                Home
-            </a>
-            </li>
-            {% if current_user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('main.profile') }}" >
-                Profile
-            </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('main.aboutus') }}" >
-                About Us
-            </a>
-            </li>
-            {% endif %}
-            {% if not current_user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('auth.login') }}" >
-                Login
-            </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('auth.signup') }}" >
-                Sign Up
-            </a>
-            </li>
-            {% endif %}
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('auth.logout') }}">
-                Logout
-            </a>
-            </li>
-            
-        </ul>
-    </div>
-  </nav>
-
-  <main>
+  {% include "navbar.html" %}
+<main>
     {% block content %}
-    {% endblock content %}
+    {% endblock %}
   </main>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="logout.js"></script>
-
+</main>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="logout.js"></script>
 </body>
+
+<footer class="footer">
+  <div class="block">
+    <div class="row">
+      <div class="footer-col">
+        <h4>
+          <img src="static/css/images/logo.png" alt="Logo">
+          Expense Tracker
+        </h4>
+      </div>
+
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="faqs.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Reach us at:</h4>
+        <div class="social-links">
+          <a href="https://github.com/Dkemzy/alx-webstack-portfolio-project"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>  
+      </div>
+
+      <div class="footer-col">
+        <h4>Address</h4>  
+      </div>
+<div class="container text-center">
+  <span class="text-muted">© 2023 Expense Tracker. All rights reserved.</span>
+</div>
+</footer>
+</body>
+</html>

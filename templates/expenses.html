@@ -1,15 +1,21 @@
-{% extends "base.html" %}
-{% block content %}
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading">Expense Tracking app</h1>
-            <p class="lead text-muted">A cool Expense Tracking app. Put your money under control!</p>
-            <p>
-                <a href="{{ url_for("main.add") }} " class="btn btn-primary my-2">Add new expense</a>
-                <a href="{{ url_for('main.calculate')}}" class="btn btn-secondary my-2">50/30/20 Calculator</a>
-            </p>
-        </div>
-    </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/main.css') }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  {% include "navbar.html"%}
+  <div class="container">
+      <p>
+        <a href="{{ url_for('main.add')}} " class="btn btn-primary my-2">Add new expense</a>
+        <a href="{{ url_for('main.calculate')}}" class="btn btn-secondary my-2">50/30/20 Calculator</a>
+      </p>
+    </div>
     <div class="container d-flex justify-content-center">
         <div class="row justify-content-center">
             {% for expense in expenses %}
@@ -46,8 +52,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <form action="{{ url_for('main.delete', expense_id=expense.id) }}"
-                                              method="post">
+                                        <form action="{{ url_for('main.delete', expense_id=expense.id) }}" method="post">
                                             <input class="btn btn-danger" type="submit" value="Delete">
                                         </form>
                                     </div>
@@ -60,4 +65,16 @@
         {% endfor %}
     </div>
 </div>
-{% endblock content %}
+</div>
+
+</main>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+{% include "footer.html" %}
+</body>
+</html>

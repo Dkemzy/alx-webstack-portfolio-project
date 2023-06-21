@@ -1,0 +1,37 @@
+<footer class="footer">
+    <div class="block">
+      <div class="row">
+        <div class="footer-col">
+          <h4>
+            <img src="{{url_for('static',filename='images/logo.png')}}" alt="Logo">
+            Expense Tracker
+          </h4>
+        </div>
+
+        <div class="footer-col">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="{{ url_for('main.index')}}"> Home </a></li>
+                <li><a href="{{ url_for('auth.login')}}"> Login </a></li>
+                <li><a href="contactus.html"> Contact Us </a></li>
+                <li><a href="{{ url_for('main.aboutus')}}"> About Us </a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Reach us at:</h4>
+          <div class="social-links">
+            <a href="https://github.com/Dkemzy/alx-webstack-portfolio-project"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>  
+        </div>
+
+        <div class="footer-col">
+          <h4>Address</h4>  
+        </div>
+  <div class="container text-center">
+    <span class="text-muted">© 2023 Expense Tracker. All rights reserved.</span>
+  </div>
+</footer>
