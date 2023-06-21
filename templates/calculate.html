@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="{{ url_for('main.calculate')}}" method="post">
+    <label for="total_income">Total Income:</label>
+    <input type="number" id="total_income" name="total_income" required><br><br>
+    <input type="submit" value="Calculate">
+  </form>
+{% endblock content %}

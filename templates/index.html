@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{{ url_for('main.index') }}">
+        <img src="{{ url_for('static',filename='css/images/logo.png') }}" alt="Logo" width="50" height="40" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('main.index') }}" >
+                  Home
+              </a>
+              </li>
+              {% if current_user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('main.profile') }}" >
+                  Profile
+              </a>
+              </li>
+              {% endif %}
+              {% if not current_user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('auth.login') }}" >
+                  Login
+              </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('auth.signup') }}" >
+                  Sign Up
+              </a>
+              </li>
+              {% endif %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('auth.logout') }}">
+                  Logout
+              </a>
+              </li>
+              
+          </ul>
+      </div>
+    </nav>
+    <header>
+    <div id="hero-text">
+      <h1>Expense Tracker App</h1>
+      <p>Don't go spending all your money without a plan</p>
+    </div>
+    <div id="scroll"></div>
+  </header>
+  <div id="content">
+    <section class="info">
+      <p>Business</p>
+      <p>For business people, maintaining an accurate expense tracker is vital for financial control and decision-making. By recording and categorizing expenses, they gain insights into spending patterns, identify areas of overspending or cost-saving opportunities, and track the profitability of their ventures. Expense tracking enables budgeting, tax preparation, and financial reporting, aiding in maintaining a healthy bottom line and optimizing business operations.</p>
+      <div class="button">
+        <a href="{{ url_for('main.add') }} ">Add An Expense</a>
+      </div>
+    </section>
+    <section class="info">
+      <p>Family</p>
+      <p>Families also benefit greatly from expense tracking. By keeping track of expenses, families can create and stick to budgets, manage bills and recurring payments, set savings goals, and track their progress. It allows them to identify areas where they can cut costs, reduce unnecessary spending, and allocate funds for important family priorities such as education, vacations, or emergencies.</p>
+      <div class="button">
+        <p>Add An Expense</p>
+      </div>
+    </section>
+    <section class="info">
+      <p>Personal</p>
+      <p>Families also benefit greatly from expense tracking. By keeping track of expenses, families can create and stick to budgets, manage bills and recurring payments, set savings goals, and track their progress. It allows them to identify areas where they can cut costs, reduce unnecessary spending, and allocate funds for important family priorities such as education, vacations, or emergencies.</p>
+      <div class="button">
+        <p>Add An Expense</p>
+      </div>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="{{url_for('static',filename='main.js')}}"></script>
+  </body>
+</html>
