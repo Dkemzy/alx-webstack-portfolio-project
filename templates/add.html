@@ -1,44 +1,40 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Profile</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add Expense</title>
+  <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="index.html">
-        <img src="static/css/images/logo.png" alt="Logo" width="100" height="60" class=" align-text-top">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="login.html">Login</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="contactus.html">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="aboutus.html">About Us</a>
-              </li>
-          </ul>
-      </div>
-    </nav>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="static/css/images/logo.png" alt="Logo" width="100" height="60" class=" align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contactus.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
 <div class="container content-section">
     <form method="POST" action="">
         {{ form.hidden_tag() }}
@@ -76,37 +72,42 @@
 </body>
 
 <footer class="footer">
-<div class="block">
-  <div class="row">
-    <div class="footer-col">
-      <h4>
-        <img src="/templates/static/css/images/logo.png" alt="Logo">
-        Expense Tracker
-      </h4>
-    </div>
+  <div class="block">
+    <div class="row">
+      <div class="footer-col">
+        <h4>
+          <img src="static/css/images/logo.png" alt="Logo">
+          Expense Tracker
+        </h4>
+      </div>
 
-    <div class="footer-col">
-      <h4>FAQs</h4>
-      <ul>
-        <li><a href="faqs.html">Frequent Asked Question</a></li>
-      </ul>
-    </div>
+      <div class="footer-col">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="faqs.html">FAQ</a></li>
+        </ul>
+      </div>
 
-    <div class="footer-col">
-      <h4>Reach us at:</h4>
-      <div class="social-links">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      </div>  
-    </div>
+      <div class="footer-col">
+        <h4>Reach us at:</h4>
+        <div class="social-links">
+          <a href="https://github.com/Dkemzy/alx-webstack-portfolio-project"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>  
+      </div>
 
-    <div class="footer-col">
-      <h4>Address</h4>  
-    </div>
-  </div>
-  <p>Copyright &copy; 2023</p>
+      <div class="footer-col">
+        <h4>Address</h4>  
+      </div>
+<div class="container text-center">
+  <span class="text-muted">© 2023 Expense Tracker. All rights reserved.</span>
 </div>
 </footer>
+</body>
 </html>
