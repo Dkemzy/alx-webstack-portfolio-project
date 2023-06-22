@@ -71,7 +71,7 @@ git clone https://github.com/Dkemzy/alx-webstack-portfolio-project.git
 ```
 2. Navigate to the project directory:
 ``` shell
-cd expense-tracker
+cd alx-webstack-portfolio-project
 ```
 3. Install the dependencies:
 ``` shell
