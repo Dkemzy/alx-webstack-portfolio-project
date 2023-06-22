@@ -17,7 +17,7 @@
     <br />
     <br />
     <br />
-    <a href="">Landing Page</a>
+    <a href="http://thehacker1.pythonanywhere.com/">Landing Page</a>
     ·
     <a href="">Blog Article</a>
     .
