@@ -76,8 +76,8 @@ git clone https://github.com/Dkemzy/alx-webstack-portfolio-project.git
 cd alx-webstack-portfolio-project
 ```
 3. Install the dependencies:
-``` shell
-npm install
+``` python
+python main.py
 ```
 4. Set up the database:
 
