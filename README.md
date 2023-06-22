@@ -46,9 +46,9 @@ Final Project Blog Article: [Blog Article]()
 
 ### Authors
 
-Robert Njonjo - [Github](https://github.com/M1urray) / [Linkedin](https://www.linkedin.com/)
+Robert Njonjo - [Github](https://github.com/M1urray) / [Linkedin](https://www.linkedin.com/in/robert-njonjo)
 
-Dennis Kamau - [Github](https://github.com/Dkemzy) / [Linkedin](https://www.linkedin.com/in/)
+Dennis Kamau - [Github](https://github.com/Dkemzy) / [Linkedin](https://www.linkedin.com/in/kamau-dennis-b3155b153)
 
 Rim EL FILALI - [Github](https://github.com/Rima119) / [Linkedin](https://www.linkedin.com/in/rim-el-filali-0710a6269/)
 
