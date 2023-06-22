@@ -65,43 +65,41 @@ Rim EL FILALI - [Github](https://github.com/Rima119) / [Linkedin](https://www.li
 - A 50/30/20 model of money management Calculator
 
 ## Installation
+
 To use the Expense Tracker, follow these steps:
 
 1. Clone the repository:
-``` shell
+
+```shell
 git clone https://github.com/Dkemzy/alx-webstack-portfolio-project.git
 ```
+
 2. Navigate to the project directory:
-``` shell
+
+```shell
 cd alx-webstack-portfolio-project
 ```
-3. Install the dependencies:
+
+3. Run the application:
+
 ``` python
 python main.py
 ```
-4. Set up the database:
 
- - Create a new PostgreSQL database.
- - Rename the .env.example file to .env and update the DB_CONNECTION configuration with your database credentials.
- - Run the database migrations:
-
-``` shell
-npm run migrate
-```
-5. Start the application:
-``` shell
-npm start
-```
 6. Access the Expense Tracker in your web browser:
+
 ``` arduino
-http://localhost:3000
-````
+http://localhost:5000
+```
+
 ## Usage
+
 1. Register for a new account by providing your details and creating a username and password.
 
 2. Log in to your account using your credentials.
 
 3. Once logged in, you will be able to:
+
 - Add new expenses by providing the necessary details such as date, category, amount, and description.
 - View your expense list, categorized by date and category.
 - Edit or delete existing expenses.
@@ -122,8 +120,8 @@ For suggestions follow these steps:
 3. Commit your changes (git commit -am 'Add some fooBar')
 4. Push to the branch (git push origin feature/fooBar)
 5. Create a new Pull Request
-</br>
-Please ensure your pull request adheres to the following guidelines:
+   </br>
+   Please ensure your pull request adheres to the following guidelines:
 
 - Alphabetize your entry.
 - Search previous suggestions before making a new one, as yours may be a duplicate.
