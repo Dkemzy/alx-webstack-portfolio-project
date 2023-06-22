@@ -112,7 +112,6 @@ http://localhost:5000
 
 If you have issues, questions or create a pull request.
 
-</br>
 For suggestions follow these steps:
 
 1. Fork this repository
@@ -120,8 +119,8 @@ For suggestions follow these steps:
 3. Commit your changes (git commit -am 'Add some fooBar')
 4. Push to the branch (git push origin feature/fooBar)
 5. Create a new Pull Request
-   </br>
-   Please ensure your pull request adheres to the following guidelines:
+
+Please ensure your pull request adheres to the following guidelines:
 
 - Alphabetize your entry.
 - Search previous suggestions before making a new one, as yours may be a duplicate.
