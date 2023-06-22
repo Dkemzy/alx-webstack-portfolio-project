@@ -81,7 +81,11 @@
   }
   
   .car-6 {
-    background-image: url("/static/images/feature3.png");
+    background-image: url("/static/images/feature3.jpg");
+  }
+
+  .car-7 {
+    background-image: url("/static/images/feature4.png");
   }
   
   .card p {
