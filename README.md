@@ -58,9 +58,11 @@ Rim EL FILALI - [Github](https://github.com/Rima119) / [Linkedin](https://www.li
 
 ### Features
 
-- Expense Tracking: Track your expenses and categorize them for easy analysis.
-- Budgeting: Create budgets for different categories and track your spending.
-- Reports: Generate reports to get insights into your spending habits.
+- User authentication
+- Track expenses and categorize them for easy analysis.
+- Add/Edit/Delete Expenses.
+- View already existing expenses
+- A 50/30/20 model of money management Calculator
 
 ## Installation
 To use the Expense Tracker, follow these steps:
