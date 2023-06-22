@@ -94,6 +94,11 @@ def aboutus():
 def contactus():
     return render_template('contactus.html')
 
+@main.route("/faqs",methods=['GET'])
+@login_required
+def faqs():
+    return render_template('faqs.html')
+
 app = create_app()  # we initialize our flask app using the __init__.py function
 if __name__ == '__main__':
     with app.app_context():

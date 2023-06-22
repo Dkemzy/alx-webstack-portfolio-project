@@ -24,12 +24,12 @@ def login(): # define login page fucntion
             flash('Please check your login details and try again.')
             return redirect(url_for('auth.login')) # if the user doesn't exist or password is wrong, reload the page
     login_user(user, remember=remember)
-    return redirect(url_for('main.expenses'))
+    return redirect(url_for('main.index'))
 
 @auth.route('/signup', methods=['GET', 'POST'])# we define the sign up path
 def signup(): # define the sign up function
     if request.method=='GET': # If the request is GET we return the sign up page and forms
-        return render_template('signup.html')
+        return render_template('login.html')
     else: # if the request is POST, then we check if the email doesn't already exist and then we save data
         email = request.form.get('email')
         name = request.form.get('name')
@@ -49,7 +49,7 @@ def signup(): # define the sign up function
 @auth.route('/forgot-password', methods=['GET', 'POST'])
 def forgot_password():
     if request.method == 'GET':
-        return render_template('put the right template')
+        return render_template('')
     else:
         email = request.form.get('email')
         # Check if the user exists in the database
