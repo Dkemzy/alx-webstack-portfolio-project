@@ -138,6 +138,12 @@ Thank you for your suggestions!
 
 ## Related projects
 
+- [Expenses](https://github.com/jakubgarfield/expenses)
+
+- [Expenso](https://github.com/Spikeysanju/Expenso)
+
+- [MyExpenses](https://github.com/mtotschnig/MyExpenses)
+
 ## Licensing
 
 This project is licensed under the [MIT License](https://github.com/Dkemzy/alx-webstack-portfolio-project/blob/main/LICENSE) - see the LICENSE file for details.
