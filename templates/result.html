@@ -1,9 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
-<section style="text-align:center; text-size"
-<h1>50/30/20 Calculator - Result</h1>
-    <p>Necessities (50%): {{ necessities }}</p>
-    <p>Wants (30%): {{ wants }}</p>
-    <p>Savings (20%): {{ savings }}</p>
-</section>
+<div class="container">
+  <section class="card" style=".container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.result {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+">
+    <h1>50/30/20 Calculator - Result</h1>
+    <div class="result">
+      <p>Necessities (50%): {{ necessities }}</p>
+      <p>Wants (30%): {{ wants }}</p>
+      <p>Savings (20%): {{ savings }}</p>
+    </div>
+    <button style="margin-top:3px;" onclick=gotoCalc() class="btn btn-primary">Back To Calculator</button>
+  </section>
+</div>
 {% endblock content %}
+<script>
+function gotoCalc(){
+    window.location.href = "{{ url_for('main.calculate')}}";
+}
+</script>
