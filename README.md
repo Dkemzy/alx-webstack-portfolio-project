@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Dkemzy/alx-webstack-portfolio-project/">
-    <img src="https://github.com/Dkemzy/alx-webstack-portfolio-project/blob/main/static/css/images/logo.png" alt="Logo" width="600" height="250">
+    <img src="/static/images/logo.png" alt="Logo" width="600" height="250">
   </a>
 
   <h3 align="center">Expense Tracking</h3></h3>
@@ -46,9 +46,9 @@ Final Project Blog Article: [Blog Article]()
 
 ### Authors
 
-Robert Njonjo - [Github](https://github.com/M1urray) / [Linkedin](https://www.linkedin.com/)
+Robert Njonjo - [Github](https://github.com/M1urray) / [Linkedin](https://www.linkedin.com/in/robert-njonjo)
 
-Dennis Kamau - [Github](https://github.com/Dkemzy) / [Linkedin](https://www.linkedin.com/in/)
+Dennis Kamau - [Github](https://github.com/Dkemzy) / [Linkedin](https://www.linkedin.com/in/kamau-dennis-b3155b153)
 
 Rim EL FILALI - [Github](https://github.com/Rima119) / [Linkedin](https://www.linkedin.com/in/rim-el-filali-0710a6269/)
 
@@ -63,8 +63,50 @@ Rim EL FILALI - [Github](https://github.com/Rima119) / [Linkedin](https://www.li
 - Reports: Generate reports to get insights into your spending habits.
 
 ## Installation
+To use the Expense Tracker, follow these steps:
 
+1. Clone the repository:
+``` shell
+git clone https://github.com/Dkemzy/alx-webstack-portfolio-project.git
+```
+2. Navigate to the project directory:
+``` shell
+cd alx-webstack-portfolio-project
+```
+3. Install the dependencies:
+``` shell
+npm install
+```
+4. Set up the database:
+
+ - Create a new PostgreSQL database.
+ - Rename the .env.example file to .env and update the DB_CONNECTION configuration with your database credentials.
+ - Run the database migrations:
+
+``` shell
+npm run migrate
+```
+5. Start the application:
+``` shell
+npm start
+```
+6. Access the Expense Tracker in your web browser:
+``` arduino
+http://localhost:3000
+````
 ## Usage
+1. Register for a new account by providing your details and creating a username and password.
+
+2. Log in to your account using your credentials.
+
+3. Once logged in, you will be able to:
+- Add new expenses by providing the necessary details such as date, category, amount, and description.
+- View your expense list, categorized by date and category.
+- Edit or delete existing expenses.
+- Generate reports to analyze your spending patterns and track your financial goals.
+- Manage your user profile and update your account settings.
+
+4. Use the Expense Tracker regularly to record your expenses and gain better control over your finances.
 
 ## Contributing
 
