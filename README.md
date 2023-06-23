@@ -79,17 +79,43 @@ git clone https://github.com/Dkemzy/alx-webstack-portfolio-project.git
 ```shell
 cd alx-webstack-portfolio-project
 ```
+3. Install the dependencies:
+``` bash
+npm install
+```
+4. Set up the database:
 
-3. Run the application:
+- Create a new PostgreSQL database.
+- Rename the .env.example file to .env and update the DB_CONNECTION configuration with your database credentials.
 
-``` python
-python main.py
+5. Run the database migrations:
+
+``` shell
+npm run migrate
 ```
 
 6. Access the Expense Tracker in your web browser:
 
 ``` arduino
 http://localhost:5000
+```
+or *RUN The Program Directly*
+
+1. Clone the repository:
+
+```shell
+git clone https://github.com/Dkemzy/alx-webstack-portfolio-project.git
+```
+
+2. Navigate to the project directory:
+
+```shell
+cd alx-webstack-portfolio-project
+```
+3. Run the application:
+
+``` python
+python main.py
 ```
 
 ## Usage
