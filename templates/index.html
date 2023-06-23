@@ -120,5 +120,16 @@
     <span class="text-muted">© 2023 Expense Tracker. All rights reserved.</span>
   </div>
 </footer>
+
+  <script>
+    function openRegistrationForm() {
+      var registrationForm = document.getElementById("registrationForm");
+      registrationForm.classList.add("registration-form-visible");
+    }
+    function gotoExpenses(){
+      window.location.href = "{{ url_for('main.expenses')}}";
+    }
+  </script>
+  
 </body>
 </html>
