@@ -40,7 +40,7 @@
 
 This project consist of developing an expense tracker app for managing personal finances that allows users to track their expenses, categorize them, and generate reports.
 
-Deployed Project link: [Deployed Project](https://www.youtube.com/)
+Deployed Project link: [Deployed Project](https://watch.screencastify.com/v/ZX2Sxa7mAuOpo4VnWKyU)
 
 Final Project Blog Article: [Blog Article]()
 
